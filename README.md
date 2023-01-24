@@ -1,3 +1,4 @@
+This is our first ALX project as a team
 
 # 0x011 .C Printf
 The aim of the project is to encourage working together as a team and understanding the printf function
@@ -74,5 +75,5 @@ These are all the tasks of this project,
 * All the above options work well together.
 
 ---
-# Author: 
+# Authors : 
 [FATMA TNANI](https://github.com/fatmatnani) and [LOIS UZOMA](https://github.com/loisuzoma)
