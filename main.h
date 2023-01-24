@@ -3,7 +3,6 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
-
 /**
  * struct flags - struct containing flags to "turn on"
  * when a flag specifier is passed to _printf()
@@ -18,6 +17,17 @@ typedef struct flags
 	int hash;
 } flags_t;
 
+/**
+ * struct printHandler - struct to choose the right function depending
+ * on the format specifier passed to _printf()
+ * @c: format specifier
+ * @f: pointer to the correct printing function
+ */
+typedef struct printHandler
+{
+	char c;
+	int (*f)(va_list ap, flags_t *f);
+} ph;
 int print_int(va_list l, flags_t *f);
 void print_number(int n);
 int print_unsigned(va_list l, flags_t *f);
@@ -39,5 +49,4 @@ int print_rev(va_list l, flags_t *f);
 int print_bigS(va_list l, flags_t *f);
 int print_address(va_list l, flags_t *f);
 int print_percent(va_list l, flags_t *f);
-
 #endif
